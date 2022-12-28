@@ -5,25 +5,45 @@ module.exports = {
     node: true
   },
   extends: [
+    'plugin:prettier/recommended',
+	'eslint:recommended',
     'plugin:react/recommended',
-    'standard-with-typescript'
+	'plugin:react/jsx-runtime',
+	'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
   ],
+  parser:'@typescript-eslint/parser',
   overrides: [
+    {
+	  files: ['*.ts', '*.tsx'],
+	  parserOptions: {
+		project: 'tsconfig.json',
+	  }
+	}
   ],
   parserOptions: {
+	ecmaFeatures: {
+	  jsx: true,
+	},
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react', 'prettier', '@typescript-eslint', '@react-hooks'
   ],
   rules: {
-    'no-unused-vars': 'off', //禁止出现未使用过的变量
-    'no-use-before-define': 'off', //禁止在变量定义之前使用它们
-    'multiline-ternary': 'off', //要求或禁止在三元操作数中间换行
-    'react/prop-types': 'off',    //关闭类型检测
-    'space-before-function-paren': ['error', { named: 'never' }], //制在 function的左括号之前使用一致的空格
-    '@typescript-eslint/no-unused-vars': 'error',    //禁止出现未使用过的变量
-    '@typescript-eslint/no-use-before-define': 'error' //禁止在变量定义之前使用它们
+    'no-async-promise-executor': 0, //允许在promise中使用async
+   '@typescript-eslint/no-non-null-assertion': 0,    //允许使用！
+    'react/jsx-uses-react': 2,
+    '@typescript-eslint/no-explicit-any': 0,
+	'react/prop-types': 0,
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    '@typescript-eslint/no-unused-vars': 'off', 
+  },
+  setings: {
+	react： {
+	  // 自动检测react版本
+	  version: 'detect',
+	}
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 // 导入路由
-import fileRoute from '@views/routes';
+import fileRoute from '../views/routes';
 
 interface ROUTE_ITEM {
   title: string;
@@ -8,6 +8,4 @@ interface ROUTE_ITEM {
   element: React.FC<any>;
 }
 
-export const routeConfig: ROUTE_ITEM[] = [
-	...fileRoute
-];
+export const routeConfig: ROUTE_ITEM[] = [...fileRoute];

@@ -1,28 +1,58 @@
 {
   "compiler0ptions": {
-    "target": "es2015",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-	"jsx": "react",
-    "experimentalDecorators": true,
-	"emitDecoratorMetadata": true,
-	"module": "ESNext",
-	"moduleResolution": "node",
-	"baseUrl": "./",
-	"paths": {
-	  "@/*": ["src/*"],
+		"target": "es2015",
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		],
+		"jsx": "react",
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": [
+				"src/*"
+			],
+      "views/*": [
+        "src/views/*"
+      ],
+      "config/*": [
+        "src/config/*"
+      ],
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "services/*": [
+        "src/services/*"
+      ]
+		},
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"noEmit": false,
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outDir": "./dist/@mf-types/.tmp",
+		"removeComments": false,
+		"rootDir": "./src",
+		"exclude": [
+			"node_modules",
+			"dist"
+		],
+		"include": [
+			"./src/**/*",
+			"./*.d.ts",
+			"./@mf-types/**/*"
+		]
 	},
-	"resolveJsonModule": true,
-	"allowJs": true,
-	"noEmit": false,
-	"isolatedModules": true,
-	"allowSyntheticDefaultImports": true,
-	"esModuleInterop": true,
-	"skipLibCheck": true,
-	"declaration": true,
-	"emitDeclarationOnly": true,
-	"outDir": "./dist/@mf-types/.tmp",
-	"removeComments": false,
-	"rootDir": "./src"},
-	"exclude": ["node_modules", "dist"],
-	"include": ["./src/**/*", "./*.d.ts", "./@mf-types/**/*"]
+	"compilerOptions": {
+		"jsx": "react",
+		"allowSyntheticDefaultImports": true
+	}
 }

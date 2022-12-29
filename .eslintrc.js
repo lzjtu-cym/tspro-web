@@ -2,48 +2,46 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
     'plugin:prettier/recommended',
-	'eslint:recommended',
+    'eslint:recommended',
     'plugin:react/recommended',
-	'plugin:react/jsx-runtime',
-	'plugin:@typescript-eslint/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
   ],
-  parser:'@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser',
   overrides: [
     {
-	  files: ['*.ts', '*.tsx'],
-	  parserOptions: {
-		project: 'tsconfig.json',
-	  }
-	}
+      files: ['*.ts', '*.tsx'],
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
   ],
   parserOptions: {
-	ecmaFeatures: {
-	  jsx: true,
-	},
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    'react', 'prettier', '@typescript-eslint', '@react-hooks'
-  ],
+  plugins: ['react', 'prettier', '@typescript-eslint', '@react-hooks'],
   rules: {
     'no-async-promise-executor': 0, //允许在promise中使用async
-   '@typescript-eslint/no-non-null-assertion': 0,    //允许使用！
+    '@typescript-eslint/no-non-null-assertion': 0, //允许使用！
     'react/jsx-uses-react': 2,
     '@typescript-eslint/no-explicit-any': 0,
-	'react/prop-types': 0,
+    'react/prop-types': 0,
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    '@typescript-eslint/no-unused-vars': 'off', 
+    '@typescript-eslint/no-unused-vars': 'off',
   },
-  setings: {
-	react： {
-	  // 自动检测react版本
-	  version: 'detect',
-	}
-  }
-}
+  settings: {
+    react: {
+      // 自动检测react版本
+      version: 'detect',
+    },
+  },
+};

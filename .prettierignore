@@ -5,7 +5,7 @@ build/
 # sniper init config: node_modules
 node_modules
 
-# sniper init config: dist 
+# sniper init config: dist
 dist
 
 # sniper init config: @mf-types
@@ -14,11 +14,6 @@ dist
 # sniper init config: @mf-types/
 @mf-types/
 
-# sniper init config: node_modules/ 
-node_modules/
-
-# sniper init config: dist/ 
-dist/
-
+# sniper init config: node_modules/
+# sniper init config: dist/
 # sniper init config: dmf-types/
-@mf-types/

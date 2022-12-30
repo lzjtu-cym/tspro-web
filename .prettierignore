@@ -1,0 +1,9 @@
+dist/
+node_modules/
+build/
+
+# sniper init config: node_modules
+node_modules
+
+# sniper init config: dist
+dist

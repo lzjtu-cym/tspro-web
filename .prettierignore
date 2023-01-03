@@ -7,3 +7,5 @@ node_modules
 
 # sniper init config: dist
 dist
+# sniper init config: build
+build

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Layout from '@/components/Layout';
+import Layout from 'src/components/Layout';
 import { routeConfig } from 'src/routes/index';
 interface Props {
   basename?: string;

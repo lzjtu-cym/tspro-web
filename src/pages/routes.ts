@@ -1,4 +1,4 @@
-import index from 'pages/index';
+import index from 'src/pages/index';
 
 const routes = [
   {
